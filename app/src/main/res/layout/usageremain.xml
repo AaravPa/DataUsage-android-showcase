@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:elevation="2dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvRemainingLbl"
+        style="@style/SectionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/REMAINING"
+        android:textAllCaps="true" />
+
+    <TextView
+        style="@style/SecondaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/remaining_subtitle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_metric"
+            android:gravity="center_vertical"
+            android:minHeight="78dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+            <TextView
+                android:id="@+id/tvDaysRem"
+                style="@style/MetricLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/days" />
+            <TextView
+                android:id="@+id/tvDaysRemVal"
+                style="@style/MetricValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_metric"
+            android:gravity="center_vertical"
+            android:minHeight="78dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+            <TextView
+                android:id="@+id/tvQuotaRem"
+                style="@style/MetricLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quota_caps" />
+            <TextView
+                android:id="@+id/tvQuotaRemVal"
+                style="@style/MetricValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_metric"
+            android:gravity="center_vertical"
+            android:minHeight="78dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+            <TextView
+                android:id="@+id/tvDailyQuotaRem"
+                style="@style/MetricLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/perday" />
+            <TextView
+                android:id="@+id/tvDailyQuotaRemVal"
+                style="@style/MetricValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

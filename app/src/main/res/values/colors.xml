@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#1F4B99</color>
+    <color name="brand_primary_dark">#16356D</color>
+    <color name="brand_secondary">#2F7D9A</color>
+    <color name="brand_teal">#0F7C82</color>
+    <color name="screen_background">#F5F7FB</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_alt">#EEF3FA</color>
+    <color name="surface_selected">#E4EDFF</color>
+    <color name="divider">#DCE3EE</color>
+    <color name="text_primary">#14213D</color>
+    <color name="text_secondary">#5C6B82</color>
+    <color name="text_muted">#8692A6</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="success">#198754</color>
+    <color name="warning">#C17B00</color>
+    <color name="danger">#C23B4A</color>
+    <color name="chart_cellular">#2F7D9A</color>
+    <color name="chart_wifi">#1F4B99</color>
+    <color name="listDividerColor">#DCE3EE</color>
+</resources>

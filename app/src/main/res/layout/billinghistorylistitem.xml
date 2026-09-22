@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="72dp"
+    android:orientation="horizontal"
+    android:paddingStart="14dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/datatype"
+        android:padding="6dp"
+        android:src="@drawable/ic_tab_cellular"
+        android:background="@drawable/bg_metric" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvDates"
+            style="@style/BodyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            style="@style/SecondaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/tap_for_details" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTotalUsage"
+        style="@style/MetricValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end" />
+
+    <TextView android:id="@+id/tvNetworkType" android:layout_width="0dp" android:layout_height="0dp" android:visibility="invisible" />
+    <TextView android:id="@+id/tvStartDate" android:layout_width="0dp" android:layout_height="0dp" android:visibility="invisible" />
+    <TextView android:id="@+id/tvEndDate" android:layout_width="0dp" android:layout_height="0dp" android:visibility="invisible" />
+    <TextView android:id="@+id/tvSent" android:layout_width="0dp" android:layout_height="0dp" android:visibility="invisible" />
+    <TextView android:id="@+id/tvReceived" android:layout_width="0dp" android:layout_height="0dp" android:visibility="invisible" />
+</LinearLayout>

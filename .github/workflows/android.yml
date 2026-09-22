@@ -1,0 +1,22 @@
+name: Android validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v4
+      - name: Install Android SDK
+        run: sdkmanager --install "platforms;android-37.0" "build-tools;36.0.0"
+      - name: Validate
+        run: ./gradlew --no-daemon assembleDebug testDebugUnitTest lintDebug

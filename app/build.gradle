@@ -1,0 +1,49 @@
+plugins {
+    id 'com.android.application'
+}
+
+def admobAppId = System.getenv('ADMOB_APP_ID') ?: 'ca-app-pub-3940256099942544~3347511713'
+def admobBannerAdUnitId = System.getenv('ADMOB_BANNER_AD_UNIT_ID') ?: 'ca-app-pub-3940256099942544/6300978111'
+
+android {
+    namespace = 'com.sigterm'
+    compileSdk = 37
+
+    buildFeatures {
+        resValues = true
+    }
+
+    defaultConfig {
+        applicationId = "com.sigterm"
+        minSdk = 24
+        targetSdk = 37
+        versionCode = 3
+        versionName = "1.2"
+        manifestPlaceholders = [ADMOB_APP_ID: admobAppId]
+        resValue "string", "admob_banner_ad_unit_id", admobBannerAdUnitId
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = true
+            shrinkResources = true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.19.0'
+    implementation 'androidx.activity:activity:1.13.0'
+    implementation 'androidx.fragment:fragment:1.9.0'
+    implementation 'androidx.preference:preference:1.2.1'
+    implementation 'androidx.work:work-runtime:2.11.2'
+    implementation 'com.google.android.gms:play-services-ads:25.5.0'
+    implementation 'com.j256.ormlite:ormlite-android:6.1'
+    testImplementation 'junit:junit:4.13.2'
+}

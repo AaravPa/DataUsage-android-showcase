@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/planmgt_prefs_title">
+        <com.sigterm.preference.QuotaPreference
+            android:key="cellular_quota_pref"
+            android:title="@string/cellular_quota"
+            android:summary="@string/unlimited_plan" />
+        <com.sigterm.preference.QuotaPreference
+            android:key="wifi_quota_pref"
+            android:title="@string/wifi_quota"
+            android:summary="@string/unlimited_plan" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/alerts_prefs_title">
+        <ListPreference
+            android:key="update_freq_pref"
+            android:title="@string/update_freq_title"
+            android:summary=""
+            android:entries="@array/entries_update_freq_pref"
+            android:entryValues="@array/entries_update_freq_pref_values"
+            android:dialogTitle="@string/update_freq_dialog_title" />
+        <CheckBoxPreference
+            android:key="enable_alerts_pref"
+            android:summary="@string/enable_alerts_summary"
+            android:title="@string/enable_alerts_title"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:key="alert1_pref"
+            android:title="@string/title_alert1"
+            android:dialogTitle="@string/dialogtitle_alert1"
+            android:dependency="enable_alerts_pref"
+            android:defaultValue="50"
+            android:inputType="phone" />
+        <EditTextPreference
+            android:key="alert2_pref"
+            android:title="@string/title_alert2"
+            android:dialogTitle="@string/dialogtitle_alert2"
+            android:dependency="enable_alerts_pref"
+            android:defaultValue="75"
+            android:inputType="phone" />
+        <EditTextPreference
+            android:key="alert3_pref"
+            android:title="@string/title_alert3"
+            android:dialogTitle="@string/dialogtitle_alert3"
+            android:dependency="enable_alerts_pref"
+            android:defaultValue="90"
+            android:inputType="phone" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/app_features_prefs_title">
+        <ListPreference
+            android:key="dataunit_display_pref"
+            android:title="@string/title_dataunit_display_pref"
+            android:summary=""
+            android:entries="@array/entries_dataunit_display_pref"
+            android:entryValues="@array/entries_dataunit_display_pref_values"
+            android:dialogTitle="@string/title_dataunit_display_pref" />
+        <ListPreference
+            android:key="launch_screen_pref"
+            android:title="@string/title_launch_screen_pref"
+            android:summary=""
+            android:entries="@array/entries_launch_screen_pref"
+            android:entryValues="@array/entries_launch_screen_pref_values"
+            android:dialogTitle="@string/title_launch_screen_pref" />
+        <ListPreference
+            android:key="week_starts_on"
+            android:title="@string/title_week_starts_on"
+            android:summary=""
+            android:entries="@array/entries_week_starts_on"
+            android:entryValues="@array/entries_week_starts_on_values"
+            android:dialogTitle="@string/title_week_starts_on" />
+        <ListPreference
+            android:key="yellow_pref"
+            android:title="@string/title_progressbar_yellow_pref"
+            android:summary=""
+            android:entries="@array/entries_progressbar_yellow_pref"
+            android:entryValues="@array/entries_progressbar_yellow_pref_values"
+            android:dialogTitle="@string/title_progressbar_yellow_pref" />
+        <ListPreference
+            android:key="red_pref"
+            android:title="@string/title_progressbar_red_pref"
+            android:summary=""
+            android:entries="@array/entries_progressbar_red_pref"
+            android:entryValues="@array/entries_progressbar_red_pref_values"
+            android:dialogTitle="@string/title_progressbar_red_pref" />
+    </PreferenceCategory>
+</PreferenceScreen>

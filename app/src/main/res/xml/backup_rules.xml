@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Usage history is local telemetry and must not be copied to cloud backups. -->
+    <exclude domain="database" path="datausage.db" />
+</full-backup-content>
