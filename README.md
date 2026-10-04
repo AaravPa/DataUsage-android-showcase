@@ -2,13 +2,24 @@
 
 Data Usage is an Android app for monitoring cellular and Wi-Fi consumption, configuring data plans and alerts, reviewing usage history, and exposing current totals through home-screen widgets. The app stores usage snapshots locally and refreshes them in the background with WorkManager.
 
-## Screens
+## Screenshots
 
-The cellular plan and history views. The gigabyte figures below are sample data placed on the app's screen structure so the layout is visible without an emulator.
+These screenshots come from the current debug build running on an Android emulator and show the
+cellular, Wi-Fi, and history workflows. The displayed usage values are local emulator data, not
+benchmark results.
 
-![Cellular plan screen](docs/screenshots/cellular.png)
-
-![Usage history](docs/screenshots/history.png)
+<table>
+  <tr>
+    <td><img src="docs/screenshots/cellular-live.png" alt="Data Usage cellular screen" width="220"></td>
+    <td><img src="docs/screenshots/wifi-live.png" alt="Data Usage Wi-Fi screen" width="220"></td>
+    <td><img src="docs/screenshots/history-live.png" alt="Data Usage history screen" width="220"></td>
+  </tr>
+  <tr>
+    <th>Cellular</th>
+    <th>Wi-Fi</th>
+    <th>History</th>
+  </tr>
+</table>
 
 This public showcase contains the runnable application, its domain/data layers, widgets, focused JVM tests, and the current CI validation workflow. It uses Google’s official test AdMob identifiers by default; publishing credentials are never stored in the repository.
 
